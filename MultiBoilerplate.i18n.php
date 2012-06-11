@@ -381,9 +381,17 @@ $messages['is'] = array(
 	'multiboilerplate-submit' => 'Hlaða',
 );
 
-/** Italian (Italiano) */
+/** Italian (italiano)
+ * @author Beta16
+ */
 $messages['it'] = array(
+	'multiboilerplate-desc' => 'Permette di selezionare un testo standard da un menu a discesa situato sopra il modulo di modifica durante la modifica di pagine',
+	'multiboilerplate-legend' => 'Seleziona testo standard',
 	'multiboilerplate-submit' => 'Carica',
+	'boilerplates' => 'Testi standard disponibili',
+	'multiboilerplate-special-pagetext' => 'Questi template possono essere precaricati durante la creazione di pagine. (<span class=plainlinks>[{{fullurl:Questa pagina non esiste|action=edit}} prova]</span>)',
+	'multiboilerplate-special-define-in-localsettings' => 'I testi standard sono definiti in LocalSettings.',
+	'multiboilerplate-special-define-in-interface' => 'I testi standard sono definiti in [[MediaWiki:Multiboilerplate]].',
 );
 
 /** Japanese (日本語)
