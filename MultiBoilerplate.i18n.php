@@ -83,7 +83,7 @@ $messages['be-tarask'] = array(
 	'multiboilerplate-special-define-in-interface' => 'Шаблёны старонак вызначаныя ў [[MediaWiki:Multiboilerplate]].',
 );
 
-/** Bulgarian (Български)
+/** Bulgarian (български)
  * @author DCLXVI
  */
 $messages['bg'] = array(
@@ -99,7 +99,7 @@ $messages['bn'] = array(
 	'boilerplates' => 'সহজলভ্য বয়লারপ্লেটসমূহ',
 );
 
-/** Breton (Brezhoneg)
+/** Breton (brezhoneg)
  * @author Fohanno
  * @author Fulup
  */
@@ -113,7 +113,7 @@ $messages['br'] = array(
 	'multiboilerplate-special-define-in-interface' => 'Termenet eo ar patromoù e [[MediaWiki:Multiboilerplate]].',
 );
 
-/** Bosnian (Bosanski)
+/** Bosnian (bosanski)
  * @author CERminator
  */
 $messages['bs'] = array(
@@ -126,14 +126,14 @@ $messages['bs'] = array(
 	'multiboilerplate-special-define-in-interface' => 'Šabloni su definirani u [[MediaWiki:Multiboilerplate]].',
 );
 
-/** Catalan (Català)
+/** Catalan (català)
  * @author Paucabot
  */
 $messages['ca'] = array(
 	'multiboilerplate-submit' => 'Carrega',
 );
 
-/** Czech (Česky) */
+/** Czech (česky) */
 $messages['cs'] = array(
 	'multiboilerplate-submit' => 'Načíst',
 );
@@ -182,7 +182,7 @@ $messages['eo'] = array(
 	'multiboilerplate-submit' => 'Alŝuti',
 );
 
-/** Spanish (Español)
+/** Spanish (español)
  * @author Crazymadlover
  * @author Imre
  * @author Translationista
@@ -197,21 +197,21 @@ $messages['es'] = array(
 	'multiboilerplate-special-define-in-interface' => 'Las repeticiones se definen en el [[MediaWiki:Multiboilerplate]].',
 );
 
-/** Estonian (Eesti)
+/** Estonian (eesti)
  * @author Avjoska
  */
 $messages['et'] = array(
 	'multiboilerplate-submit' => 'Laadi',
 );
 
-/** Basque (Euskara)
+/** Basque (euskara)
  * @author An13sa
  */
 $messages['eu'] = array(
 	'multiboilerplate-submit' => 'Kargatu',
 );
 
-/** Finnish (Suomi)
+/** Finnish (suomi)
  * @author Cimon Avaro
  * @author Crt
  * @author Str4nd
@@ -225,7 +225,7 @@ $messages['fi'] = array(
 	'multiboilerplate-special-define-in-interface' => 'Vakiotekstit määritellään järjestelmäviestillä [[MediaWiki:Multiboilerplate]].',
 );
 
-/** French (Français)
+/** French (français)
  * @author Crochet.david
  * @author Grondin
  * @author IAlex
@@ -240,7 +240,7 @@ $messages['fr'] = array(
 	'multiboilerplate-special-define-in-interface' => 'Les modèles sont définis dans [[MediaWiki:Multiboilerplate]].',
 );
 
-/** Franco-Provençal (Arpetan)
+/** Franco-Provençal (arpetan)
  * @author ChrisPtDe
  */
 $messages['frp'] = array(
@@ -333,7 +333,7 @@ $messages['hsb'] = array(
 	'multiboilerplate-special-define-in-interface' => 'Tekstowe elementy so w [[MediaWiki:Multiboilerplate]] definuja.',
 );
 
-/** Hungarian (Magyar)
+/** Hungarian (magyar)
  * @author Glanthor Reviol
  */
 $messages['hu'] = array(
@@ -346,7 +346,7 @@ $messages['hu'] = array(
 	'multiboilerplate-special-define-in-interface' => 'A sablonszövegek a [[MediaWiki:Multiboilerplate]] lapon vannak definiálva.',
 );
 
-/** Interlingua (Interlingua)
+/** Interlingua (interlingua)
  * @author McDutchie
  */
 $messages['ia'] = array(
@@ -372,7 +372,7 @@ $messages['id'] = array(
 	'multiboilerplate-special-define-in-interface' => "''Boilerplate'' didefinisikan di [[MediaWiki:Multiboilerplate]].",
 );
 
-/** Icelandic (Íslenska)
+/** Icelandic (íslenska)
  * @author Sigurður Guðbrandsson <sg@ro.is>
  */
 $messages['is'] = array(
@@ -448,7 +448,7 @@ $messages['lb'] = array(
 	'multiboilerplate-special-define-in-interface' => 'Textschabloune sinn a [[MediaWiki:Multiboilerplate]] definéiert.',
 );
 
-/** Macedonian (Македонски)
+/** Macedonian (македонски)
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
@@ -514,7 +514,7 @@ $messages['nl'] = array(
 	'multiboilerplate-special-define-in-interface' => 'Sjablonen worden ingesteld in [[MediaWiki:Multiboilerplate]].',
 );
 
-/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
  * @author Harald Khan
  * @author Njardarlogar
  */
@@ -524,7 +524,7 @@ $messages['nn'] = array(
 	'multiboilerplate-submit' => 'Last',
 );
 
-/** Occitan (Occitan)
+/** Occitan (occitan)
  * @author Cedric31
  */
 $messages['oc'] = array(
@@ -544,7 +544,7 @@ $messages['pdc'] = array(
 	'multiboilerplate-submit' => 'Laade',
 );
 
-/** Polish (Polski)
+/** Polish (polski)
  * @author Maikking
  * @author Sp5uhe
  */
@@ -578,7 +578,7 @@ $messages['ps'] = array(
 	'multiboilerplate-submit' => 'برسېرول',
 );
 
-/** Portuguese (Português)
+/** Portuguese (português)
  * @author Hamilton Abreu
  * @author Malafaya
  * @author Waldir
@@ -593,7 +593,7 @@ $messages['pt'] = array(
 	'multiboilerplate-special-define-in-interface' => 'Os textos normalizados são definidos em [[MediaWiki:Multiboilerplate]].',
 );
 
-/** Brazilian Portuguese (Português do Brasil)
+/** Brazilian Portuguese (português do Brasil)
  * @author Eduardo.mps
  */
 $messages['pt-br'] = array(
@@ -606,14 +606,14 @@ $messages['pt-br'] = array(
 	'multiboilerplate-special-define-in-interface' => 'Modelos são definidos em [[MediaWiki:Multiboilerplate]]',
 );
 
-/** Romanian (Română)
+/** Romanian (română)
  * @author Firilacroco
  */
 $messages['ro'] = array(
 	'multiboilerplate-submit' => 'Încărcare',
 );
 
-/** Tarandíne (Tarandíne)
+/** tarandíne (tarandíne)
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
@@ -626,7 +626,7 @@ $messages['roa-tara'] = array(
 	'multiboilerplate-special-define-in-interface' => "Le pàggene da 'ngorporà sonde definite jndr'à [[MediaWiki:Multiboilerplate]].",
 );
 
-/** Russian (Русский)
+/** Russian (русский)
  * @author Kaganer
  * @author Александр Сигачёв
  */
@@ -640,7 +640,7 @@ $messages['ru'] = array(
 	'multiboilerplate-special-define-in-interface' => 'Заготовки определены в [[MediaWiki:Multiboilerplate]].',
 );
 
-/** Slovak (Slovenčina)
+/** Slovak (slovenčina)
  * @author Helix84
  */
 $messages['sk'] = array(
@@ -653,19 +653,19 @@ $messages['sk'] = array(
 	'multiboilerplate-special-define-in-interface' => 'Šablóny sú definované v [[MediaWiki:Multiboilerplate]].',
 );
 
-/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
 	'multiboilerplate-submit' => 'Учитај',
 );
 
-/** Serbian (Latin script) (‪Srpski (latinica)‬) */
+/** Serbian (Latin script) (‪srpski (latinica)‬) */
 $messages['sr-el'] = array(
 	'multiboilerplate-submit' => 'Učitaj',
 );
 
-/** Swedish (Svenska)
+/** Swedish (svenska)
  * @author M.M.S.
  */
 $messages['sv'] = array(
@@ -708,7 +708,7 @@ $messages['tr'] = array(
 	'multiboilerplate-submit' => 'Yükle',
 );
 
-/** Ukrainian (Українська)
+/** Ukrainian (українська)
  * @author Тест
  */
 $messages['uk'] = array(
@@ -745,7 +745,7 @@ $messages['zh-hans'] = array(
 	'multiboilerplate-special-define-in-interface' => '预加载页面（Boilerplates）也可在 [[MediaWiki:Multiboilerplate]] 中设置',
 );
 
-/** Traditional Chinese (‪中文(繁體)‬)
+/** Traditional Chinese (‪中文（繁體）‬)
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
