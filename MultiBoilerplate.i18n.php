@@ -69,7 +69,7 @@ $messages['arz'] = array(
 	'multiboilerplate-submit' => 'تحميل',
 );
 
-/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
  */
@@ -154,7 +154,7 @@ $messages['de'] = array(
 	'multiboilerplate-special-define-in-interface' => 'Textvorlagen werden in [[MediaWiki:Multiboilerplate]] definiert.',
 );
 
-/** Lower Sorbian (Dolnoserbski)
+/** Lower Sorbian (dolnoserbski)
  * @author Michawiki
  */
 $messages['dsb'] = array(
@@ -258,7 +258,7 @@ $messages['fy'] = array(
 	'multiboilerplate-submit' => 'Ynlade',
 );
 
-/** Galician (Galego)
+/** Galician (galego)
  * @author Toliño
  */
 $messages['gl'] = array(
@@ -320,7 +320,7 @@ $messages['hi'] = array(
 	'multiboilerplate-submit' => 'लोड',
 );
 
-/** Upper Sorbian (Hornjoserbsce)
+/** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
 $messages['hsb'] = array(
