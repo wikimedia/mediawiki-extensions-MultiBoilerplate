@@ -485,8 +485,7 @@ $messages['ms'] = array(
 	'multiboilerplate-submit' => 'Muatkan',
 );
 
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Jon Harald Søby
+/** Norwegian Bokmål (‪norsk (bokmål)‬)
  * @author Nghtwlkr
  */
 $messages['nb'] = array(
