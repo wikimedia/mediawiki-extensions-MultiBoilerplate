@@ -211,6 +211,13 @@ $messages['eu'] = array(
 	'multiboilerplate-submit' => 'Kargatu',
 );
 
+/** Persian (فارسی)
+ * @author Mjbmr
+ */
+$messages['fa'] = array(
+	'multiboilerplate-submit' => 'بارگیری',
+);
+
 /** Finnish (suomi)
  * @author Cimon Avaro
  * @author Crt
@@ -637,6 +644,13 @@ $messages['ru'] = array(
 	'multiboilerplate-special-pagetext' => 'Эти шаблоны могут подгружаться при создании страницы. (<span class=plainlinks>[{{fullurl:Этой страницы не существует|action=edit}} Пример]</span>)',
 	'multiboilerplate-special-define-in-localsettings' => 'Заготовки определены в LocalSettings.',
 	'multiboilerplate-special-define-in-interface' => 'Заготовки определены в [[MediaWiki:Multiboilerplate]].',
+);
+
+/** Sinhala (සිංහල)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['si'] = array(
+	'multiboilerplate-submit' => 'පූරණය',
 );
 
 /** Slovak (slovenčina)
