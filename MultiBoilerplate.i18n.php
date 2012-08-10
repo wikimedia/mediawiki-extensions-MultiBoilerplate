@@ -404,6 +404,7 @@ $messages['it'] = array(
 /** Japanese (日本語)
  * @author Fryed-peach
  * @author Hosiryuhosi
+ * @author Shirayuki
  */
 $messages['ja'] = array(
 	'multiboilerplate-desc' => 'ページ編集時に編集フォームの上のドロップダウンボックスから定型句を選択できるようにする',
@@ -411,8 +412,8 @@ $messages['ja'] = array(
 	'multiboilerplate-submit' => '読み込み',
 	'boilerplates' => '利用可能な定型句',
 	'multiboilerplate-special-pagetext' => 'これらの雛型はページ作成時に先行読み込みすることが可能です。(<span class=plainlinks>[{{fullurl:このページは存在しません|action=edit}} 実演]</span>)',
-	'multiboilerplate-special-define-in-localsettings' => '定型句は LocalSettings にて定義されています。',
-	'multiboilerplate-special-define-in-interface' => '定型句は [[MediaWiki:Multiboilerplate]] にて定義されています。',
+	'multiboilerplate-special-define-in-localsettings' => '定型句は LocalSettings で定義されています。',
+	'multiboilerplate-special-define-in-interface' => '定型句は [[MediaWiki:Multiboilerplate]] で定義されています。',
 );
 
 /** Javanese (Basa Jawa)
