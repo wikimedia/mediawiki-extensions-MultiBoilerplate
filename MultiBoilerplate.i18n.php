@@ -423,6 +423,13 @@ $messages['jv'] = array(
 	'multiboilerplate-submit' => 'Unggahna',
 );
 
+/** Georgian (ქართული)
+ * @author David1010
+ */
+$messages['ka'] = array(
+	'multiboilerplate-submit' => 'ჩატვირთვა',
+);
+
 /** Khmer (ភាសាខ្មែរ)
  * @author Chhorran
  */
