@@ -500,6 +500,13 @@ $messages['ms'] = array(
 	'multiboilerplate-submit' => 'Muatkan',
 );
 
+/** Maltese (Malti)
+ * @author Chrisportelli
+ */
+$messages['mt'] = array(
+	'multiboilerplate-submit' => "Tella'",
+);
+
 /** Norwegian Bokmål (‪norsk (bokmål)‬)
  * @author Nghtwlkr
  */
