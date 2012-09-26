@@ -773,10 +773,16 @@ $messages['zh-hans'] = array(
 	'multiboilerplate-special-define-in-interface' => '预加载页面（Boilerplates）也可在 [[MediaWiki:Multiboilerplate]] 中设置',
 );
 
-/** Traditional Chinese (‪中文（繁體）‬)
+/** Traditional Chinese (中文（繁體）‎)
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
+	'multiboilerplate-desc' => '這個插件可以在一個下拉菜單中選擇需要預加載的頁面',
+	'multiboilerplate-legend' => '選擇頁面格式模板',
 	'multiboilerplate-submit' => '載入',
+	'boilerplates' => '預加載格式模板（boilerplates）',
+	'multiboilerplate-special-pagetext' => '這些模板可以在頁面創建時預加載入編輯框 (<span class=plainlinks>[{{fullurl:不存在的頁面|action=edit}} 測試例子]</span>)',
+	'multiboilerplate-special-define-in-localsettings' => '在LocalSettings中設置預加載頁面',
+	'multiboilerplate-special-define-in-interface' => '預加載頁面（Boilerplates）也可在 [[MediaWiki:Multiboilerplate]] 中設置',
 );
 
