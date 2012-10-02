@@ -69,7 +69,7 @@ $messages['arz'] = array(
 	'multiboilerplate-submit' => 'تحميل',
 );
 
-/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author EugeneZelenko
  * @author Jim-by
  */
@@ -507,7 +507,7 @@ $messages['mt'] = array(
 	'multiboilerplate-submit' => "Tella'",
 );
 
-/** Norwegian Bokmål (‪norsk (bokmål)‬)
+/** Norwegian Bokmål (norsk (bokmål)‎)
  * @author Nghtwlkr
  */
 $messages['nb'] = array(
@@ -535,7 +535,7 @@ $messages['nl'] = array(
 	'multiboilerplate-special-define-in-interface' => 'Sjablonen worden ingesteld in [[MediaWiki:Multiboilerplate]].',
 );
 
-/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
+/** Norwegian Nynorsk (norsk (nynorsk)‎)
  * @author Harald Khan
  * @author Njardarlogar
  */
@@ -681,14 +681,14 @@ $messages['sk'] = array(
 	'multiboilerplate-special-define-in-interface' => 'Šablóny sú definované v [[MediaWiki:Multiboilerplate]].',
 );
 
-/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (српски (ћирилица)‎)
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
 	'multiboilerplate-submit' => 'Учитај',
 );
 
-/** Serbian (Latin script) (‪srpski (latinica)‬) */
+/** Serbian (Latin script) (srpski (latinica)‎) */
 $messages['sr-el'] = array(
 	'multiboilerplate-submit' => 'Učitaj',
 );
@@ -759,7 +759,7 @@ $messages['vo'] = array(
 	'multiboilerplate-submit' => 'Lodön',
 );
 
-/** Simplified Chinese (‪中文（简体）‬)
+/** Simplified Chinese (中文（简体）‎)
  * @author PhiLiP
  * @author Zoglun
  */
