@@ -31,7 +31,7 @@
  * @copyright Copyright © 2007 - 2009 Robert Leverington.
  * @copyright Copyright © 2009 Al Maghi.
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
- * @version 1.8.2a
+ * @version 2.0.0a
  *
  * @TODO use the core ?preload=boilerplate when $wgMultiBoilerplateOverwrite == false
  * @TODO ajax-load the boilerplate, if possible
@@ -41,7 +41,7 @@
 $extensionCredits = array(
 	'path'           => __FILE__,
 	'name'           => 'MultiBoilerplate',
-	'version'        => '1.8.2a',
+	'version'        => '2.0.0a',
 	'license-name'   => 'GPL-2.0+',
 	'url'            => 'https://www.mediawiki.org/wiki/Extension:MultiBoilerplate',
 	'author'         => array(
