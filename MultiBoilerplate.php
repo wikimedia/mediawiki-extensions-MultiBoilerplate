@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Allows a boilerplate to be selected from a drop down box located above the
- * edit form when editing non-exstant pages or, optionally (based upon
- * configuration variable $wgMultiBoilerplateOverwrite), load the template
- * over the current contents.
+ * The MultiBoilerplate extension allows a boilerplate to be selected from a drop
+ * down box located above the edit form. By default this shows only on creation of
+ * new pages. When loading a boilerplate, it will completely replace whatever text
+ * is already in the edit form.
  *
- *  * This program is free software; you can redistribute it and/or modify
+ * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
@@ -31,7 +31,7 @@
  * @copyright Copyright © 2007 - 2009 Robert Leverington.
  * @copyright Copyright © 2009 Al Maghi.
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
- * @version 2.0.0a
+ * @version 2.0.0
  *
  * @TODO use the core ?preload=boilerplate when $wgMultiBoilerplateOverwrite == false
  * @TODO ajax-load the boilerplate, if possible
@@ -41,13 +41,13 @@
 $extensionCredits = array(
 	'path'           => __FILE__,
 	'name'           => 'MultiBoilerplate',
-	'version'        => '2.0.0a',
+	'version'        => '2.0.0',
 	'license-name'   => 'GPL-2.0+',
 	'url'            => 'https://www.mediawiki.org/wiki/Extension:MultiBoilerplate',
 	'author'         => array(
 		'Robert Leverington',
 		'Al Maghi',
-		'Dror S.'
+		'Dror S. [FFS]'
 	)
 );
 
@@ -72,16 +72,17 @@ $GLOBALS['wgMultiBoilerplateOverwrite'] = false;
 
 // To display a special page listing defined boilerplates, set *before* require_once:
 // $wgMultiBoilerplateDiplaySpecialPage = true;
-
-$GLOBALS[ 'wgAutoloadClasses' ][ 'MultiBoilerplateHooks' ] = __DIR__ . '/MultiBoilerplate.hooks.php';
-$GLOBALS[ 'wgMessagesDirs']['MultiBoilerplate'] = __DIR__ . '/i18n';
-$GLOBALS[ 'wgExtensionMessagesFiles' ][ 'MultiBoilerplate' ] = __DIR__ . '/MultiBoilerplate.i18n.php';
+$dir = __DIR__;
+$GLOBALS[ 'wgAutoloadClasses' ][ 'MultiBoilerplateHooks' ] = "$dir/MultiBoilerplate.hooks.php";
+$GLOBALS[ 'wgMessagesDirs']['MultiBoilerplate'] = "$dir/i18n";
+$GLOBALS[ 'wgExtensionMessagesFiles' ][ 'MultiBoilerplate' ] = "$dir/MultiBoilerplate.i18n.php";
 
 if ( isset( $GLOBALS[ 'wgMultiBoilerplateDiplaySpecialPage' ] )
-     && $GLOBALS[ 'wgMultiBoilerplateDiplaySpecialPage' ] === true
+	&& $GLOBALS[ 'wgMultiBoilerplateDiplaySpecialPage' ] === true
 ) {
-	$GLOBALS[ 'wgAutoloadClasses' ][ 'SpecialBoilerplates' ] = __DIR__ . '/SpecialBoilerplates.php';
-	$GLOBALS[ 'wgExtensionMessagesFiles' ][ 'MultiBoilerplateAlias' ] = __DIR__ . '/MultiBoilerplate.alias.php';
+	$GLOBALS[ 'wgAutoloadClasses' ][ 'SpecialBoilerplates' ] = "$dir/SpecialBoilerplates.php";
+	$GLOBALS[ 'wgExtensionMessagesFiles' ]['MultiBoilerplateAlias'] =
+		"$dir/MultiBoilerplate.alias.php";
 	$GLOBALS[ 'wgSpecialPages' ][ 'Boilerplates' ] = 'SpecialBoilerplates';
 	$GLOBALS[ 'wgSpecialPageGroups' ][ 'Boilerplates' ] = 'pages';
 }

@@ -23,7 +23,8 @@
  * @ingroup SpecialPage
  * @author Al Maghi
  *
- * @TODO Use special page to actually edit [[MediaWiki:MultiBoilerplate]]
+ * @TODO fix code duplication (here and in MultiBoilerplate.hooks.php)
+ * @TODO Use special page to actually edit [[MediaWiki:MultiBoilerplate]]?
  */
 
 class SpecialBoilerplates extends IncludableSpecialPage {
@@ -55,12 +56,14 @@ class SpecialBoilerplates extends IncludableSpecialPage {
 			}
 		} else {
 			if ( !$this->mIncluding ) {
-				$output->addWikiMsg( 'multiboilerplate-special-define-in-interface' ) ;
+				$output->addWikiMsg( 'multiboilerplate-special-define-in-interface' );
 			}
-			$things = explode( "\n", str_replace( "\r", "\n", str_replace( "\r\n", "\n", wfMessage( 'multiboilerplate' ) ) ) ); // Ensure line-endings are \n
+			$things = explode( "\n", str_replace( "\r", "\n", str_replace(
+				"\r\n", "\n", wfMessage( 'multiboilerplate' )
+			) ) ); // Ensure line-endings are \n
 			foreach ( $things as $row ) {
 				if ( substr( ltrim( $row ), 0, 1 ) === '*' ) {
-					$row = ltrim( $row, '* ' ); // Remove the asterisk (and a space if found) from the start of the line.
+					$row = ltrim( $row, '* ' ); // Remove astersk & spacing from start of line.
 					$row = explode( '|', $row );
 					if ( !isset( $row[ 1 ] ) ) {
 						return true; // Invalid syntax, abort

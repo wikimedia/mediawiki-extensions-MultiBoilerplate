@@ -54,7 +54,7 @@ class MultiBoilerplateHooks {
 			$options = '';
 			foreach ( $wgMultiBoilerplateOptions as $name => $template ) {
 				$selected = false;
-				if ( $request->getVal( 'boilerplate' ) == $template ) {
+				if ( $request->getVal( 'boilerplate' ) === $template ) {
 					$selected = true;
 				}
 				$options .= Xml::option( $name, $template, $selected );
@@ -62,20 +62,33 @@ class MultiBoilerplateHooks {
 		} else {
 			$things = wfMessage( 'multiboilerplate' )->inContentLanguage()->text();
 			$options = '';
-			$things = explode( "\n", str_replace( "\r", "\n", str_replace( "\r\n", "\n", $things ) ) ); // Ensure line-endings are \n
+			$headingFound = 0;
+			$things = explode( "\n", str_replace(
+				"\r", "\n", str_replace( "\r\n", "\n", $things )
+			) ); // Ensure line-endings are \n
 			foreach ( $things as $row ) {
-				if ( substr( ltrim( $row ), 0, 1 ) === '*' ) {
+				if ( preg_match( '/==\s*(.*)\s*==/', $row, $optGroupText ) ) {
+					if ( $headingFound ) {
+						$options .= '</optgroup>';
+					}
+					$headingFound = true;
+					$options.='<optgroup label="' . htmlspecialchars( $optGroupText[1] ) . '">';
+				} elseif ( substr( ltrim( $row ), 0, 1 ) === '*' ) {
 					$row = ltrim( $row, '* ' ); // Remove astersk & spacing from start of line.
-					$row = explode( '|', $row );
-					if ( !isset( $row[ 1 ] ) ) {
+					$rowParts = explode( '|', $row );
+					if ( !isset( $rowParts[ 1 ] ) ) {
 						return true; // Invalid syntax, abort
 					}
 					$selected = false;
-					if ( $request->getVal( 'boilerplate' ) == $row[ 1 ] ) {
+					if ( $request->getVal( 'boilerplate' ) === $rowParts[ 1 ] ) {
 						$selected = true;
 					}
-					$options .= Xml::option( $row[ 0 ], $row[ 1 ], $selected );
+					$options .= Xml::option( $rowParts[ 0 ], $rowParts[ 1 ], $selected );
 				}
+
+			}
+			if ( $headingFound ) {
+				$options .= '</optgroup>';
 			}
 		}
 
@@ -91,35 +104,45 @@ class MultiBoilerplateHooks {
 				'name' => 'multiboilerplateform',
 				'method' => 'get',
 				'action' => $title->getEditURL() )
-			) .
-			Xml::openElement( 'fieldset' ) .
-			Xml::element( 'legend', null, wfMessage( 'multiboilerplate-legend' ) ) .
-			Xml::openElement( 'label' ) .
-			wfMessage( 'multiboilerplate-label' ) .
-			Xml::openElement( 'select', array( 'name' => 'boilerplate' ) ) .
-			$options .
-			Xml::closeElement( 'select' ) .
-			Xml::closeElement( 'label' ) .
-			' ' .
-			Html::Hidden( 'action', 'edit' ) .
-			Html::Hidden( 'title', $request->getText( 'title' ) ) .
-			Xml::submitButton( wfMessage( 'multiboilerplate-submit' ) ) .
-			Xml::closeElement( 'fieldset' ) .
-			Xml::closeElement( 'form' );
+			)
+			. Xml::openElement( 'fieldset' )
+			. Xml::element( 'legend', null, wfMessage( 'multiboilerplate-legend' ) )
+			. Xml::openElement( 'label' )
+			. wfMessage( 'multiboilerplate-label' )->text()
+			. Xml::openElement( 'select', array( 'name' => 'boilerplate' ) )
+			. $options
+			. Xml::closeElement( 'select' )
+			. Xml::closeElement( 'label' )
+			. ' '
+			. Html::Hidden( 'action', 'edit' )
+			. Html::Hidden( 'title', $request->getText( 'title' ) )
+			. Xml::submitButton( wfMessage( 'multiboilerplate-submit' ) )
+			. Xml::closeElement( 'fieldset' )
+			. Xml::closeElement( 'form' );
 
 		// If the Load button has been pushed replace the article text with the boilerplate.
 		if ( $request->getText( 'boilerplate', false ) ) {
 			$boilerplateTitle = Title::newFromText( $request->getVal( 'boilerplate' ) );
-			$boilerplate = new WikiPage( $boilerplateTitle );
-			$parser = $wgParser->getFreshParser();  // Since MW 1.24
-			$parserOptions = is_null( $parser->getOptions() ) ? new ParserOptions : $parser->getOptions();
-			$content = $parser->getPreloadText(
-				$boilerplate->getContent()->getWikitextForTransclusion(),
-				$boilerplateTitle,
-				$parserOptions
-			);
+			if ( !$boilerplateTitle->exists() ) {
+				$out->addHTML(
+					'<strong class="error">'
+					. $out->msg( 'multiboilerplate-nonexistant-page' )->params(
+						$request->getText( 'boilerplate')
+					)->text()
+					. '</strong>'
+				);
+			} else {
+				$boilerplate   = new WikiPage( $boilerplateTitle );
+				$parser        = $wgParser->getFreshParser();  // Since MW 1.24
+				$parserOptions = is_null( $parser->getOptions() ) ? new ParserOptions : $parser->getOptions();
+				$content       = $parser->getPreloadText(
+					$boilerplate->getContent()->getWikitextForTransclusion(),
+					$boilerplateTitle,
+					$parserOptions
+				);
 
-			$editPage->textbox1 = $content;
+				$editPage->textbox1 = $content;
+			}
 		}
 
 		return true;
