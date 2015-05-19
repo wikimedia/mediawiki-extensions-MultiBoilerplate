@@ -27,7 +27,7 @@
  * @link https://www.mediawiki.org/wiki/Extension:MultiBoilerplate
  * @author Robert Leverington <robert@rhl.me.uk>
  * @author Al Maghi
- * @author Dror S. [FFS] <FreedomFighterSparrow@gmail.com
+ * @author Dror S. [FFS]
  * @copyright Copyright © 2007 - 2009 Robert Leverington.
  * @copyright Copyright © 2009 Al Maghi.
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
@@ -47,7 +47,7 @@ $extensionCredits = array(
 	'author'         => array(
 		'Robert Leverington',
 		'Al Maghi',
-		'Dror S. [FFS]'
+		'Dror S. [FFS] ([http://www.kolzchut.org.il Kol-Zchut])'
 	)
 );
 
