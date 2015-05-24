@@ -75,5 +75,9 @@ class SpecialBoilerplates extends IncludableSpecialPage {
 
 		return true;
 	}
+
+	protected function getGroupName() {
+		return 'pages';
+	}
 }
 
