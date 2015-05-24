@@ -6,7 +6,7 @@ new pages. When loading a boilerplate, it will completely replace whatever text
 is already in the edit form.
 
 ## Dependencies
-Version 2.0.0 and later require MediaWiki >= 1.24.
+Version 2.0.1 and later requires MediaWiki >= 1.25.
 
 ## Installation
 See the regular installation instructions for MediaWiki extensions:

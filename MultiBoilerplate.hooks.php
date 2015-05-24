@@ -148,4 +148,14 @@ class MultiBoilerplateHooks {
 		return true;
 	}
 
+	public static function onRegistration() {
+		global $wgMultiBoilerplateDiplaySpecialPage, $wgAutoloadClasses, $wgExtensionMessagesFiles, $wgSpecialPages;
+		if( isset( $wgMultiBoilerplateDiplaySpecialPage ) && $wgMultiBoilerplateDiplaySpecialPage === true ) {
+			$wgAutoloadClasses['SpecialBoilerplates'] = __DIR__ . "/SpecialBoilerplates.php";
+			$wgExtensionMessagesFiles['MultiBoilerplateAlias'] = __DIR__ . "/MultiBoilerplate.alias.php";
+			$wgSpecialPages['Boilerplates'] = 'SpecialBoilerplates';
+		}
+
+	}
+
 }
