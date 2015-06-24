@@ -1,6 +1,6 @@
 {
 	"name": "MultiBoilerplate",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"author": [
 		"Robert Leverington",
 		"Al Maghi",
@@ -25,8 +25,9 @@
 		]
 	},
 	"config": {
-		"MultiBoilerplateOptions": [],
-		"MultiBoilerplateOverwrite": false
+		"MultiBoilerplateOptions": null,
+		"MultiBoilerplateOverwrite": false,
+        "$MultiBoilerplateDiplaySpecialPage": false
 	},
 	"manifest_version": 1
 }

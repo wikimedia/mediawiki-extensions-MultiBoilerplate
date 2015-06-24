@@ -37,39 +37,46 @@ class SpecialBoilerplates extends IncludableSpecialPage {
 	public function execute( $par ) {
 		global $wgMultiBoilerplateOptions;
 		$output = $this->getOutput();
-
-		// No options found in either configuration file, abort.
-		if ( !isset( $wgMultiBoilerplateOptions ) ) {
-			return true;
-		}
+		$boilerplates = '';
 
 		if ( !$this->mIncluding ) {
 			$this->setHeaders();
 			$output->addWikiMsg( 'multiboilerplate-special-pagetext' );
 		}
-		if ( is_array( $wgMultiBoilerplateOptions ) ) {
+		if ( is_array( $wgMultiBoilerplateOptions ) && !empty( $wgMultiBoilerplateOptions ) ) {
+			foreach ( $wgMultiBoilerplateOptions as $name => $template ) {
+				$boilerplates .= "* [[$template]]\n";
+			}
+
 			if ( !$this->mIncluding ) {
 				$output->addWikiMsg( 'multiboilerplate-special-define-in-localsettings' );
 			}
-			foreach ( $wgMultiBoilerplateOptions as $name => $template ) {
-				$output->addWikiText( "* [[$template]]\n" );
-			}
+			$output->addWikiText( $boilerplates );
+
 		} else {
-			if ( !$this->mIncluding ) {
-				$output->addWikiMsg( 'multiboilerplate-special-define-in-interface' );
-			}
-			$things = explode( "\n", str_replace( "\r", "\n", str_replace(
-				"\r\n", "\n", wfMessage( 'multiboilerplate' )
+			$rows = explode( "\n", str_replace( "\r", "\n", str_replace(
+				"\r\n", "\n", wfMessage( 'Multiboilerplate' )->plain()
 			) ) ); // Ensure line-endings are \n
-			foreach ( $things as $row ) {
+
+			foreach ( $rows as $row ) {
 				if ( substr( ltrim( $row ), 0, 1 ) === '*' ) {
-					$row = ltrim( $row, '* ' ); // Remove astersk & spacing from start of line.
+					$row = ltrim( $row, '* ' ); // Remove asterisk & spacing from start of line.
 					$row = explode( '|', $row );
 					if ( !isset( $row[ 1 ] ) ) {
 						return true; // Invalid syntax, abort
 					}
-					$output->addWikiText( "* [[$row[1]|$row[0]]]\n" );
+					$boilerplates .= "* [[$row[1]|$row[0]]]\n";
 				}
+			}
+
+			if ( $boilerplates !== '' ) {
+				if ( !$this->mIncluding ) {
+					$output->addWikiMsg( 'multiboilerplate-special-define-in-interface' );
+				}
+				$output->addWikiText( $boilerplates );
+			} else {
+				// No boilerplates found in either configuration option!
+				$output->wrapWikiMsg( "<div class='error'>$1</div>", 'multiboilerplate-special-no-boilerplates' );
 			}
 		}
 

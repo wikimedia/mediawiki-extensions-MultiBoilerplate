@@ -50,7 +50,7 @@ class MultiBoilerplateHooks {
 		// Generate the options list used inside the boilerplate selection box.
 		// If $wgMultiBoilerplateOptions is an array then use that, else fall back
 		// to the MediaWiki:Multiboilerplate message.
-		if ( is_array( $wgMultiBoilerplateOptions ) ) {
+		if ( is_array( $wgMultiBoilerplateOptions ) && !empty( $wgMultiBoilerplateOptions )  ) {
 			$options = '';
 			foreach ( $wgMultiBoilerplateOptions as $name => $template ) {
 				$selected = false;
@@ -60,7 +60,7 @@ class MultiBoilerplateHooks {
 				$options .= Xml::option( $name, $template, $selected );
 			}
 		} else {
-			$things = wfMessage( 'multiboilerplate' )->inContentLanguage()->text();
+			$things = wfMessage( 'Multiboilerplate' )->inContentLanguage()->text();
 			$options = '';
 			$headingFound = 0;
 			$things = explode( "\n", str_replace(
@@ -106,9 +106,9 @@ class MultiBoilerplateHooks {
 				'action' => $title->getEditURL() )
 			)
 			. Xml::openElement( 'fieldset' )
-			. Xml::element( 'legend', null, wfMessage( 'multiboilerplate-legend' ) )
+			. Xml::element( 'legend', null, wfMessage( 'multiboilerplate-legend' )->plain() )
 			. Xml::openElement( 'label' )
-			. wfMessage( 'multiboilerplate-label' )->text()
+			. wfMessage( 'multiboilerplate-label' )->plain()
 			. Xml::openElement( 'select', array( 'name' => 'boilerplate' ) )
 			. $options
 			. Xml::closeElement( 'select' )
@@ -116,7 +116,7 @@ class MultiBoilerplateHooks {
 			. ' '
 			. Html::Hidden( 'action', 'edit' )
 			. Html::Hidden( 'title', $request->getText( 'title' ) )
-			. Xml::submitButton( wfMessage( 'multiboilerplate-submit' ) )
+			. Xml::submitButton( wfMessage( 'multiboilerplate-submit' )->plain() )
 			. Xml::closeElement( 'fieldset' )
 			. Xml::closeElement( 'form' );
 
