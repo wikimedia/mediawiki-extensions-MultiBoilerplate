@@ -14,6 +14,6 @@
 	"multiboilerplate-special-pagetext": "These templates can be preloaded on page creation. (<span class=plainlinks>[{{fullurl:This page does not exist|action=edit}} demo]</span>)",
 	"multiboilerplate-special-define-in-localsettings": "Boilerplates are defined in LocalSettings.",
 	"multiboilerplate-special-define-in-interface": "Boilerplates are defined in [[MediaWiki:Multiboilerplate]].",
-    "multiboilerplate-special-no-boilerplates": "No boilerplates defined anywhere.",
-    "multiboilerplate-nonexistant-page": "Boilerplate page does not exist: \"$1\""
+	"multiboilerplate-special-no-boilerplates": "No boilerplates defined anywhere.",
+	"multiboilerplate-nonexistant-page": "Boilerplate page does not exist: \"$1\""
 }
