@@ -60,13 +60,12 @@ class MultiBoilerplateHooks {
 				$options .= Xml::option( $name, $template, $selected );
 			}
 		} else {
-			$things = wfMessage( 'Multiboilerplate' )->inContentLanguage()->text();
+			$rows = wfMessage( 'Multiboilerplate' )->inContentLanguage()->text();
 			$options = '';
 			$headingFound = 0;
-			$things = explode( "\n", str_replace(
-				"\r", "\n", str_replace( "\r\n", "\n", $things )
-			) ); // Ensure line-endings are \n
-			foreach ( $things as $row ) {
+			$rows = preg_split( '/\r\n|\r|\n/', $rows );
+
+			foreach ( $rows as $row ) {
 				if ( preg_match( '/==\s*(.*)\s*==/', $row, $optGroupText ) ) {
 					if ( $headingFound ) {
 						$options .= '</optgroup>';
@@ -74,11 +73,18 @@ class MultiBoilerplateHooks {
 					$headingFound = true;
 					$options.='<optgroup label="' . htmlspecialchars( $optGroupText[1] ) . '">';
 				} elseif ( substr( ltrim( $row ), 0, 1 ) === '*' ) {
-					$row = ltrim( $row, '* ' ); // Remove astersk & spacing from start of line.
+					$row = ltrim( $row, '* ' ); // Remove asterisk & spacing from start of line.
 					$rowParts = explode( '|', $row );
 					if ( !isset( $rowParts[ 1 ] ) ) {
 						return true; // Invalid syntax, abort
 					}
+
+					$rowParts[1] = trim( $rowParts[1] );  // Clean whitespace that might break wikilinks
+
+					// allow wikilinks in template names
+					$rowParts[1] = preg_replace( '/^\[\[/','',$rowParts[1] );
+					$rowParts[1] = preg_replace( '/\]\]$/','',$rowParts[1] );
+
 					$selected = false;
 					if ( $request->getVal( 'boilerplate' ) === $rowParts[ 1 ] ) {
 						$selected = true;
@@ -87,6 +93,7 @@ class MultiBoilerplateHooks {
 				}
 
 			}
+
 			if ( $headingFound ) {
 				$options .= '</optgroup>';
 			}

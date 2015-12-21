@@ -1,4 +1,5 @@
-# MultiBoilerplate extension for MediaWiki
+MultiBoilerplate extension for MediaWiki
+========================================
 
 The MultiBoilerplate extension allows a boilerplate to be selected from a drop
 down box located above the edit form. By default this shows only on creation of
@@ -9,8 +10,8 @@ is already in the edit form.
 Version 2.1.0 and later requires MediaWiki >= 1.25.
 
 ## Installation
-See the regular installation instructions for MediaWiki extensions:
-	https://www.mediawiki.org/wiki/Manual:Extensions#Installing_an_extension
+See the regular installation instructions for MediaWiki extensions: 
+  <https://www.mediawiki.org/wiki/Manual:Extensions#Installing_an_extension>
 
 ## Configuration
 
@@ -24,12 +25,15 @@ The main configuration is of the available boilerplates; this is done *either*:
 * Or through system message `MediaWiki:Multiboilerplate`, which uses the following
   format:  
   `My Boilerplate|Template:My Boilerplate`  
-  You can also create headers to separate boilerplates, for example:
- 	
+    * You can also create headers to separate boilerplates, which will be transformed
+      to option groups in the edit form drop down. For example:
+    
         == Pretty Templates ==
         * My Boilerplate|Template:My Boilerplate
         == Ugly Templates ==
-        * Their Boilerplate|Template:Their Boilerplate
+            * Their Boilerplate|Template:Their Boilerplate
+    * The template pages may also be represented by links, just for convenience, e.g.:
+      `* My Boilerplate|[[Template:My Boilerplate]]`
 
 
 ### Additional configuration options
@@ -43,11 +47,11 @@ The main configuration is of the available boilerplates; this is done *either*:
   will completed overwrite the current contents.
 
 ## Change log
-See files RELEASE-NOTES and HISTORY for a complete change log.
+See [CHANGELOG.md](CHANGELOG.md) for a complete change log.
 
 ## Credits
 Originally by Robert Leverington (minuteelectron), with additional contributions
-by Al Maghi and Dror S [FFS].
+by Al Maghi, Dror S \[FFS\] and Jhf2442.
 See the [commit log](https://git.wikimedia.org/log/mediawiki%2Fextensions%2FMultiBoilerplate)
 for a full list of contributers.
 

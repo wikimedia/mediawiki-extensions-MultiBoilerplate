@@ -54,18 +54,24 @@ class SpecialBoilerplates extends IncludableSpecialPage {
 			$output->addWikiText( $boilerplates );
 
 		} else {
-			$rows = explode( "\n", str_replace( "\r", "\n", str_replace(
-				"\r\n", "\n", wfMessage( 'Multiboilerplate' )->plain()
-			) ) ); // Ensure line-endings are \n
+			$rows = wfMessage( 'Multiboilerplate' )->inContentLanguage()->text();
+			$rows = preg_split( '/\r\n|\r|\n/', $rows );
 
 			foreach ( $rows as $row ) {
 				if ( substr( ltrim( $row ), 0, 1 ) === '*' ) {
 					$row = ltrim( $row, '* ' ); // Remove asterisk & spacing from start of line.
-					$row = explode( '|', $row );
-					if ( !isset( $row[ 1 ] ) ) {
+					$rowParts = explode( '|', $row );
+					if ( !isset( $rowParts[ 1 ] ) ) {
 						return true; // Invalid syntax, abort
 					}
-					$boilerplates .= "* [[$row[1]|$row[0]]]\n";
+
+					$rowParts[1] = trim( $rowParts[1] );  // Clean whitespace that might break wikilinks
+
+					// template names might have wikilinks in them to begin with, remove those
+					$rowParts[1] = preg_replace( '/^\[\[/','',$rowParts[1] );
+					$rowParts[1] = preg_replace( '/\]\]$/','',$rowParts[1] );
+
+					$boilerplates .= "* [[$rowParts[1]|$rowParts[0]]]\n";
 				}
 			}
 
@@ -76,7 +82,7 @@ class SpecialBoilerplates extends IncludableSpecialPage {
 				$output->addWikiText( $boilerplates );
 			} else {
 				// No boilerplates found in either configuration option!
-				$output->wrapWikiMsg( "<div class='error'>$1</div>", 'multiboilerplate-special-no-boilerplates' );
+				$output->wrapWikiMsg( "<div class=\"error\">$1</div>", 'multiboilerplate-special-no-boilerplates' );
 			}
 		}
 

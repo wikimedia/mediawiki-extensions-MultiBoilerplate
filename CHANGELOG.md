@@ -4,6 +4,10 @@ Revision history for Extension:MultiBoilerplate
 All notable changes to this project will be documented in this file.
 This project adheres (or attempts to adhere) to [Semantic Versioning](http://semver.org/).
 
+## [2.1.1] - 2015-12-22
+- Support using wikilinks inside MediaWiki:Multiboilerplates (patch by Jhf2442)
+- Slight code beautification
+
 ## [2.1.0] - 2015-05-24
 
 ### Breaking changes
@@ -25,19 +29,19 @@ This project adheres (or attempts to adhere) to [Semantic Versioning](http://sem
   of the extension, or it will have no effect.
 
 ### Added
-* Handle `<onlyinclude>` tag in a boilerplate.
-* Add support for optgroups (headers) in the dropdown list, by using level 2 headers (==)
+- Handle `<onlyinclude>` tag in a boilerplate.
+- Add support for optgroups (headers) in the dropdown list, by using level 2 headers (==)
   in `MediaWiki:MultiBoilerplate`, thanks to an old patch by an unknown author; see
   [T43788](https://phabricator.wikimedia.org/T43788) on Phabricator for more details.
-* README, RELEASE-NOTES, HISTORY & LICENSE files.
+- README, RELEASE-NOTES, HISTORY & LICENSE files.
 
 
 ### Changed
-* Updated to work with MediaWiki >= 1.24
-* Refactored to (hopefully) modern MediaWiki extension standards, e.g.:
-    * File structure
-    * JSON files for l10n
-    * Reduce use of globals
+- Updated to work with MediaWiki >= 1.24
+- Refactored to (hopefully) modern MediaWiki extension standards, e.g.:
+    - File structure
+    - JSON files for l10n
+    - Reduce use of globals
 
 
 ## 1.8.0 (2009-07-31)
