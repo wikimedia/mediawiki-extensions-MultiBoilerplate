@@ -28,7 +28,7 @@
 	"config": {
 		"MultiBoilerplateOptions": null,
 		"MultiBoilerplateOverwrite": false,
-        "MultiBoilerplateDiplaySpecialPage": false
+		"MultiBoilerplateDiplaySpecialPage": false
 	},
 	"manifest_version": 1
 }
