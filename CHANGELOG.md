@@ -4,6 +4,10 @@ Revision history for Extension:MultiBoilerplate
 All notable changes to this project will be documented in this file.
 This project adheres (or attempts to adhere) to [Semantic Versioning](http://semver.org/).
 
+
+## [2.1.2] - 2017-04-24
+Document i18n messages.
+
 ## [2.1.1] - 2015-12-22
 - Support using wikilinks inside MediaWiki:Multiboilerplates (patch by Jhf2442)
 - Slight code beautification
