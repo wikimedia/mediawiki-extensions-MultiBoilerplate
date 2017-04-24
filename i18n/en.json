@@ -9,7 +9,6 @@
 	"multiboilerplate-label": "",
 	"multiboilerplate-legend": "Select boilerplate",
 	"multiboilerplate-submit": "Load",
-	"specialboilerplate-desc": "Special page to display all defined boilerplates",
 	"boilerplates": "Boilerplates",
 	"multiboilerplate-special-pagetext": "These templates can be preloaded on page creation. (<span class=plainlinks>[{{fullurl:This page does not exist|action=edit}} demo]</span>)",
 	"multiboilerplate-special-define-in-localsettings": "Boilerplates are defined in LocalSettings.",
