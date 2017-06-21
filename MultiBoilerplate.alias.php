@@ -155,7 +155,7 @@ $specialPageAliases['ia'] = array(
  * @author Bennylin
  */
 $specialPageAliases['id'] = array(
-	'Boilerplates' => "''Boilerplates'' yang tersedia",
+	'Boilerplates' => array( '\'\'Boilerplates\'\' yang tersedia' ),
 );
 
 /** Italian (italiano)
@@ -253,7 +253,7 @@ $specialPageAliases['pt-br'] = array(
  * @author Joetaras
  */
 $specialPageAliases['roa-tara'] = array(
-	'Boilerplates' => "Pàggene da 'ngorporà disponibbele",
+	'Boilerplates' => array( 'Pàggene da \'ngorporà disponibbele' ),
 );
 
 /** Russian (русский)
