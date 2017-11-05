@@ -52,7 +52,7 @@ See [CHANGELOG.md](CHANGELOG.md) for a complete change log.
 ## Credits
 Originally by Robert Leverington (minuteelectron), with additional contributions
 by Al Maghi, Dror S \[FFS\] and Jhf2442.
-See the [commit log](https://git.wikimedia.org/log/mediawiki%2Fextensions%2FMultiBoilerplate)
+See the [commit log](https://phabricator.wikimedia.org/diffusion/EMBP/history/master/)
 for a full list of contributers.
 
 
