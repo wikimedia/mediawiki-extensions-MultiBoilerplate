@@ -135,7 +135,7 @@ class MultiBoilerplateHooks {
 					'<strong class="error">'
 					. $out->msg( 'multiboilerplate-nonexistant-page' )->params(
 						$request->getText( 'boilerplate')
-					)->text()
+					)->escaped()
 					. '</strong>'
 				);
 			} else {
