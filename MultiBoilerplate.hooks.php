@@ -25,7 +25,6 @@
 
 class MultiBoilerplateHooks {
 
-
 	/**
 	 * EditPage::showEditForm:initial hook
 	 *
@@ -50,7 +49,7 @@ class MultiBoilerplateHooks {
 		// Generate the options list used inside the boilerplate selection box.
 		// If $wgMultiBoilerplateOptions is an array then use that, else fall back
 		// to the MediaWiki:Multiboilerplate message.
-		if ( is_array( $wgMultiBoilerplateOptions ) && !empty( $wgMultiBoilerplateOptions )  ) {
+		if ( is_array( $wgMultiBoilerplateOptions ) && !empty( $wgMultiBoilerplateOptions ) ) {
 			$options = '';
 			foreach ( $wgMultiBoilerplateOptions as $name => $template ) {
 				$selected = false;
@@ -134,7 +133,7 @@ class MultiBoilerplateHooks {
 				$out->addHTML(
 					'<strong class="error">'
 					. $out->msg( 'multiboilerplate-nonexistant-page' )->params(
-						$request->getText( 'boilerplate')
+						$request->getText( 'boilerplate' )
 					)->escaped()
 					. '</strong>'
 				);
@@ -157,7 +156,7 @@ class MultiBoilerplateHooks {
 
 	public static function onRegistration() {
 		global $wgMultiBoilerplateDiplaySpecialPage, $wgAutoloadClasses, $wgExtensionMessagesFiles, $wgSpecialPages;
-		if( isset( $wgMultiBoilerplateDiplaySpecialPage ) && $wgMultiBoilerplateDiplaySpecialPage === true ) {
+		if ( isset( $wgMultiBoilerplateDiplaySpecialPage ) && $wgMultiBoilerplateDiplaySpecialPage === true ) {
 			$wgAutoloadClasses['SpecialBoilerplates'] = __DIR__ . "/SpecialBoilerplates.php";
 			$wgExtensionMessagesFiles['MultiBoilerplateAlias'] = __DIR__ . "/MultiBoilerplate.alias.php";
 			$wgSpecialPages['Boilerplates'] = 'SpecialBoilerplates';
