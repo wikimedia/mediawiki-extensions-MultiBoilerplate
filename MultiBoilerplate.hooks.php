@@ -161,7 +161,6 @@ class MultiBoilerplateHooks {
 			$wgExtensionMessagesFiles['MultiBoilerplateAlias'] = __DIR__ . "/MultiBoilerplate.alias.php";
 			$wgSpecialPages['Boilerplates'] = 'SpecialBoilerplates';
 		}
-
 	}
 
 }
