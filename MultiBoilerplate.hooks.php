@@ -82,8 +82,8 @@ class MultiBoilerplateHooks {
 					$rowParts[1] = trim( $rowParts[1] );  // Clean whitespace that might break wikilinks
 
 					// allow wikilinks in template names
-					$rowParts[1] = preg_replace( '/^\[\[/','',$rowParts[1] );
-					$rowParts[1] = preg_replace( '/\]\]$/','',$rowParts[1] );
+					$rowParts[1] = preg_replace( '/^\[\[/', '', $rowParts[1] );
+					$rowParts[1] = preg_replace( '/\]\]$/', '', $rowParts[1] );
 
 					$selected = false;
 					if ( $request->getVal( 'boilerplate' ) === $rowParts[ 1 ] ) {

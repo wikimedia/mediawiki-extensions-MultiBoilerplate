@@ -68,8 +68,8 @@ class SpecialBoilerplates extends IncludableSpecialPage {
 					$rowParts[1] = trim( $rowParts[1] );  // Clean whitespace that might break wikilinks
 
 					// template names might have wikilinks in them to begin with, remove those
-					$rowParts[1] = preg_replace( '/^\[\[/','',$rowParts[1] );
-					$rowParts[1] = preg_replace( '/\]\]$/','',$rowParts[1] );
+					$rowParts[1] = preg_replace( '/^\[\[/', '', $rowParts[1] );
+					$rowParts[1] = preg_replace( '/\]\]$/', '', $rowParts[1] );
 
 					$boilerplates .= "* [[$rowParts[1]|$rowParts[0]]]\n";
 				}
