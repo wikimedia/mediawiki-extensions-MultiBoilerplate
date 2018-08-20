@@ -93,4 +93,3 @@ class SpecialBoilerplates extends IncludableSpecialPage {
 		return 'pages';
 	}
 }
-
