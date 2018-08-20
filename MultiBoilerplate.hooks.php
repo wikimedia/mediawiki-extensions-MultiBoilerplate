@@ -106,17 +106,17 @@ class MultiBoilerplateHooks {
 
 		// Append the selection form to the top of the edit page.
 		$editPage->editFormPageTop .=
-			Xml::openElement( 'form', array(
+			Xml::openElement( 'form', [
 				'id' => 'multiboilerplateform',
 				'name' => 'multiboilerplateform',
 				'method' => 'get',
-				'action' => $title->getEditURL() )
+				'action' => $title->getEditURL() ]
 			)
 			. Xml::openElement( 'fieldset' )
 			. Xml::element( 'legend', null, wfMessage( 'multiboilerplate-legend' )->plain() )
 			. Xml::openElement( 'label' )
 			. wfMessage( 'multiboilerplate-label' )->plain()
-			. Xml::openElement( 'select', array( 'name' => 'boilerplate' ) )
+			. Xml::openElement( 'select', [ 'name' => 'boilerplate' ] )
 			. $options
 			. Xml::closeElement( 'select' )
 			. Xml::closeElement( 'label' )
