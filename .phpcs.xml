@@ -7,8 +7,6 @@
 		<exclude name="MediaWiki.Files.ClassMatchesFilename.NotMatch" />
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment" />
 		<exclude name="Squiz.Scope.MethodScope.Missing" />
-		<exclude name="Squiz.WhiteSpace.OperatorSpacing.NoSpaceAfter" />
-		<exclude name="Squiz.WhiteSpace.OperatorSpacing.NoSpaceBefore" />
 	</rule>
 	<file>.</file>
 	<arg name="extensions" value="php,php5,inc"/>

@@ -70,7 +70,7 @@ class MultiBoilerplateHooks {
 						$options .= '</optgroup>';
 					}
 					$headingFound = true;
-					$options.='<optgroup label="' . htmlspecialchars( $optGroupText[1] ) . '">';
+					$options .= '<optgroup label="' . htmlspecialchars( $optGroupText[1] ) . '">';
 				} elseif ( substr( ltrim( $row ), 0, 1 ) === '*' ) {
 					$row = ltrim( $row, '* ' ); // Remove asterisk & spacing from start of line.
 					$rowParts = explode( '|', $row );
