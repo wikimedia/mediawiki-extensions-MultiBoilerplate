@@ -1,7 +1,7 @@
 <?php
 /**
  * Special:boilerplates, provides a list of MediaWiki:Multiboilerplate or $wgMultiBoilerplateOptions
- * For more info see http://mediawiki.org/wiki/Extension:Multiboilerplate
+ * For more info see https://mediawiki.org/wiki/Extension:Multiboilerplate
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
