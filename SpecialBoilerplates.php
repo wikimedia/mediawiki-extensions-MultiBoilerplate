@@ -51,7 +51,7 @@ class SpecialBoilerplates extends IncludableSpecialPage {
 			if ( !$this->mIncluding ) {
 				$output->addWikiMsg( 'multiboilerplate-special-define-in-localsettings' );
 			}
-			$output->addWikiText( $boilerplates );
+			$output->addWikiTextAsInterface( $boilerplates );
 
 		} else {
 			$rows = wfMessage( 'Multiboilerplate' )->inContentLanguage()->text();
@@ -79,7 +79,7 @@ class SpecialBoilerplates extends IncludableSpecialPage {
 				if ( !$this->mIncluding ) {
 					$output->addWikiMsg( 'multiboilerplate-special-define-in-interface' );
 				}
-				$output->addWikiText( $boilerplates );
+				$output->addWikiTextAsInterface( $boilerplates );
 			} else {
 				// No boilerplates found in either configuration option!
 				$output->wrapWikiMsg( "<div class=\"error\">$1</div>", 'multiboilerplate-special-no-boilerplates' );
