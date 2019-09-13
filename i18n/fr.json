@@ -4,7 +4,8 @@
 			"Crochet.david",
 			"Grondin",
 			"IAlex",
-			"Gomoko"
+			"Gomoko",
+			"Thibaut120094"
 		]
 	},
 	"multiboilerplate-desc": "Permet de sélectionner une page ou un modèle à incorporer à partir d’une boîte en haut du formulaire d’édition d’une page.",
@@ -15,5 +16,5 @@
 	"multiboilerplate-special-define-in-localsettings": "Les modèles sont définis dans LocalSettings.",
 	"multiboilerplate-special-define-in-interface": "Les modèles sont définis dans [[MediaWiki:Multiboilerplate]].",
 	"multiboilerplate-special-no-boilerplates": "Aucun texte standard définit nulle part.",
-	"multiboilerplate-nonexistant-page": "La page de texte standard n’existe pas : « $1 »"
+	"multiboilerplate-nonexistant-page": "La page de texte standard n’existe pas : « $1 »"
 }
