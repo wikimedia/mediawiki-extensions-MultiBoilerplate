@@ -140,7 +140,7 @@ class MultiBoilerplateHooks {
 			} else {
 				$boilerplate   = new WikiPage( $boilerplateTitle );
 				$parser        = $wgParser->getFreshParser();  // Since MW 1.24
-				$parserOptions = is_null( $parser->getOptions() ) ? new ParserOptions : $parser->getOptions();
+				$parserOptions = $parser->getOptions() === null ? new ParserOptions : $parser->getOptions();
 				$content       = $parser->getPreloadText(
 					$boilerplate->getContent()->getWikitextForTransclusion(),
 					$boilerplateTitle,
