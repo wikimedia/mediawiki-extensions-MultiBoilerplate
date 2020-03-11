@@ -24,9 +24,7 @@
 		"MultiBoilerplateHooks": "MultiBoilerplate.hooks.php"
 	},
 	"Hooks": {
-		"EditPage::showEditForm:initial": [
-			"MultiBoilerplateHooks::onEditPageShowEditFormInitial"
-		]
+		"EditPage::showEditForm:initial": "MultiBoilerplateHooks::onEditPageShowEditFormInitial"
 	},
 	"config": {
 		"MultiBoilerplateOptions": null,
