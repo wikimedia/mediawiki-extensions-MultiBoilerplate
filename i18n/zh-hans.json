@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
+			"Liuxinyu970226",
 			"PhiLiP",
-			"Zoglun",
-			"Liuxinyu970226"
+			"Zoglun"
 		]
 	},
 	"multiboilerplate-desc": "在编辑页面时，允许从编辑表单上方的下拉框中选择样板",

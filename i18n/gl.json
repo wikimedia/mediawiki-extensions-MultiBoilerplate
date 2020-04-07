@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Toliño",
-			"Elisardojm"
+			"Elisardojm",
+			"Toliño"
 		]
 	},
 	"multiboilerplate-desc": "Permite que unha páxina a engadir sexa seleccionada dunha caixa despregable localizada enriba do formulario de edición ao editar páxinas",

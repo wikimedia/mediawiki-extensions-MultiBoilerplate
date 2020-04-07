@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Wrightbus",
-			"Kly"
+			"Kly",
+			"Wrightbus"
 		]
 	},
 	"multiboilerplate-desc": "允許在編輯頁面時，可從編輯表單上方的下拉選單中選擇格式模板",

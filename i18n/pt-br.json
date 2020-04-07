@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Eduardo.mps",
-			"Eduardo Addad de Oliveira"
+			"Eduardo Addad de Oliveira",
+			"Eduardo.mps"
 		]
 	},
 	"multiboilerplate-desc": "Permite que um texto-modelo seja selecionado de uma lista suspensa localizada acima do formulário de edição, quando se edita páginas",

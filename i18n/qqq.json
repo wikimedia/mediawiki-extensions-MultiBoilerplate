@@ -1,10 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Dror S. [FFS]",
 			"MinuteElectron",
 			"Purodha",
-			"RobertL",
-			"Dror S. [FFS]"
+			"RobertL"
 		]
 	},
 	"multiboilerplate": "{{notranslate}} This is used for configuration",
