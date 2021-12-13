@@ -5,7 +5,8 @@
 			"Metalhead64",
 			"Pill",
 			"Revolus",
-			"Umherirrender"
+			"Umherirrender",
+			"MuratTheTurkish"
 		]
 	},
 	"multiboilerplate-desc": "Ermöglicht während der Seitenbearbeitung, eine Textvorlage aus der Auswahlbox über dem Bearbeitungsformular auszuwählen",
@@ -13,7 +14,7 @@
 	"multiboilerplate-submit": "Laden",
 	"boilerplates": "Textvorlagen",
 	"multiboilerplate-special-pagetext": "Diese Vorlagen können beim Erstellen einer Seite automatisch geladen werden (<span class=plainlinks>[{{fullurl:Diese Seite existiert nicht|action=edit}} Demo]</span>).",
-	"multiboilerplate-special-define-in-localsettings": "Textvorlagen werden in <tt>LocalSettings.php</tt> definiert.",
+	"multiboilerplate-special-define-in-localsettings": "Textvorlagen werden in LocalSettings definiert.",
 	"multiboilerplate-special-define-in-interface": "Textvorlagen werden in [[MediaWiki:Multiboilerplate]] definiert.",
 	"multiboilerplate-special-no-boilerplates": "Es sind nirgendwo Textvorlagen definiert.",
 	"multiboilerplate-nonexistant-page": "Die Textvorlagenseite ist nicht vorhanden: „$1“"
