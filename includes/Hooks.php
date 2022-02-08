@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Hooks for MultiBoilerplate extension
  *
@@ -23,7 +24,18 @@
  * @TODO de-duplicate code between this and SpecialBoilerplates
  */
 
-class MultiBoilerplateHooks {
+namespace MediaWiki\Extension\MultiBoilerplate;
+
+use EditPage;
+use Html;
+use MediaWiki\MediaWikiServices;
+use OutputPage;
+use ParserOptions;
+use Title;
+use WikiPage;
+use Xml;
+
+class Hooks {
 
 	/**
 	 * EditPage::showEditForm:initial hook
@@ -35,23 +47,24 @@ class MultiBoilerplateHooks {
 	 * @return true
 	 */
 	public static function onEditPageShowEditFormInitial( EditPage $editPage, OutputPage $out ) {
-		global $wgParser, $wgMultiBoilerplateOptions, $wgMultiBoilerplateOverwrite;
 		$title = $out->getTitle();
 		$request = $out->getRequest();
+		$optionsConfig = $config = $out->getConfig()->get( 'MultiBoilerplateOptions' );
+		$allowContentOverwrite = $out->getConfig()->get( 'MultiBoilerplateOverwrite' );
 
 		// If $wgMultiBoilerplateOverwrite is true then detect whether
 		// the current page exists or not and if it does return true
 		// to end execution of this function.
-		if ( !$wgMultiBoilerplateOverwrite && $title->exists() ) {
+		if ( !$allowContentOverwrite && $title->exists() ) {
 			return true;
 		}
 
 		// Generate the options list used inside the boilerplate selection box.
 		// If $wgMultiBoilerplateOptions is an array then use that, else fall back
 		// to the MediaWiki:Multiboilerplate message.
-		if ( is_array( $wgMultiBoilerplateOptions ) && !empty( $wgMultiBoilerplateOptions ) ) {
+		if ( is_array( $optionsConfig ) && !empty( $optionsConfig ) ) {
 			$options = '';
-			foreach ( $wgMultiBoilerplateOptions as $name => $template ) {
+			foreach ( $optionsConfig as $name => $template ) {
 				$selected = false;
 				if ( $request->getVal( 'boilerplate' ) === $template ) {
 					$selected = true;
@@ -139,7 +152,7 @@ class MultiBoilerplateHooks {
 				);
 			} else {
 				$boilerplate   = new WikiPage( $boilerplateTitle );
-				$parser        = $wgParser->getFreshParser();  // Since MW 1.24
+				$parser = MediaWikiServices::getInstance()->getParser()->getFreshParser(); // Since MW 1.32
 				$parserOptions = $parser->getOptions() === null ?
 							new ParserOptions( $out->getUser() ) :
 							$parser->getOptions();
@@ -154,15 +167,6 @@ class MultiBoilerplateHooks {
 		}
 
 		return true;
-	}
-
-	public static function onRegistration() {
-		global $wgMultiBoilerplateDiplaySpecialPage, $wgAutoloadClasses, $wgExtensionMessagesFiles, $wgSpecialPages;
-		if ( isset( $wgMultiBoilerplateDiplaySpecialPage ) && $wgMultiBoilerplateDiplaySpecialPage === true ) {
-			$wgAutoloadClasses['SpecialBoilerplates'] = __DIR__ . "/SpecialBoilerplates.php";
-			$wgExtensionMessagesFiles['MultiBoilerplateAlias'] = __DIR__ . "/MultiBoilerplate.alias.php";
-			$wgSpecialPages['Boilerplates'] = 'SpecialBoilerplates';
-		}
 	}
 
 }
