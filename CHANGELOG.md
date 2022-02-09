@@ -4,6 +4,9 @@ Revision history for Extension:MultiBoilerplate
 All notable changes to this project will be documented in this file.
 This project adheres (or attempts to adhere) to [Semantic Versioning](http://semver.org/).
 
+## [2.2.0] 2021-03-23
+- Update to work with MediaWiki 1.35
+- Remove `$wgMultiBoilerplateDiplaySpecialPage` and always load the special page
 
 ## [2.1.2] - 2017-04-24
 Document i18n messages.
