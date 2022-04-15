@@ -1,4 +1,5 @@
 {
+	"name": "MultiBoilerplate",
 	"private": true,
 	"scripts": {
 		"test": "grunt test"
