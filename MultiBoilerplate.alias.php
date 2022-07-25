@@ -276,16 +276,19 @@ $specialPageAliases['tl'] = [
 ];
 
 /** Simplified Chinese (中文（简体）‎)
+ * @author Lakejason0
  * @author PhiLiP
  * @author Zoglun
  */
 $specialPageAliases['zh-hans'] = [
-	'Boilerplates' => [ '预加载格式模板（boilerplates）' ],
+	'Boilerplates' => [ '样板', '范本', '格式模板', '预加载格式模板（boilerplates）' ],
 ];
 
 /** Traditional Chinese (中文（繁體）‎)
+ * @author Lakejason0
+ * @author Winston Sung
  * @author Wrightbus
  */
 $specialPageAliases['zh-hant'] = [
-	'Boilerplates' => [ '預加載格式模板（boilerplates）' ],
+	'Boilerplates' => [ '範本', '樣板', '格式模板', '預加載格式模板（boilerplates）' ],
 ];
