@@ -10,5 +10,7 @@
 	"boilerplates": "Textos standard",
 	"multiboilerplate-special-pagetext": "Iste patronos pote esser precargate al creation de paginas. (<span class=plainlinks>[{{fullurl:Iste pagina non existe|action=edit}} demo]</span>)",
 	"multiboilerplate-special-define-in-localsettings": "Le modellos es definite in LocalSettings.",
-	"multiboilerplate-special-define-in-interface": "Modellos es definite in [[MediaWiki:Multiboilerplate]]."
+	"multiboilerplate-special-define-in-interface": "Modellos es definite in [[MediaWiki:Multiboilerplate]].",
+	"multiboilerplate-special-no-boilerplates": "Nulle texto standard es definite in alcun parte.",
+	"multiboilerplate-nonexistant-page": "Le pagina de texto standard non existe: \"$1\""
 }
