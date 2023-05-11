@@ -5,16 +5,17 @@
 			"Gomoko",
 			"Grondin",
 			"IAlex",
-			"Thibaut120094"
+			"Thibaut120094",
+			"Verdy p"
 		]
 	},
-	"multiboilerplate-desc": "Permet de sélectionner une page ou un modèle à incorporer à partir d’une boîte en haut du formulaire d’édition d’une page.",
-	"multiboilerplate-legend": "Sélectionner la page à incorporer",
+	"multiboilerplate-desc": "Permet de sélectionner un contenu standard à intégrer dans un panneau déroulant en haut du formulaire de modification d’une page.",
+	"multiboilerplate-legend": "Sélectionner un contenu standard",
 	"multiboilerplate-submit": "Charger",
-	"boilerplates": "Textes standards",
-	"multiboilerplate-special-pagetext": "Ces modèles peuvent être préchargé à la création de pages. (<span class=plainlinks>[{{fullurl:Cette page n'existe pas|action=edit}} démo]</span>)",
-	"multiboilerplate-special-define-in-localsettings": "Les modèles sont définis dans LocalSettings.",
-	"multiboilerplate-special-define-in-interface": "Les modèles sont définis dans [[MediaWiki:Multiboilerplate]].",
-	"multiboilerplate-special-no-boilerplates": "Aucun texte standard définit nulle part.",
-	"multiboilerplate-nonexistant-page": "La page de texte standard n’existe pas : « $1 »"
+	"boilerplates": "Contenus standards",
+	"multiboilerplate-special-pagetext": "Ces modèles peuvent être préchargés lors de la création de pages. (<span class=plainlinks>[{{fullurl:Cette page n’existe pas|action=edit}} démo]</span>)",
+	"multiboilerplate-special-define-in-localsettings": "Les contenus standards sont définis dans LocalSettings.",
+	"multiboilerplate-special-define-in-interface": "Les contenus standards sont définis dans [[MediaWiki:Multiboilerplate]].",
+	"multiboilerplate-special-no-boilerplates": "Aucun contenu standard définit nulle part.",
+	"multiboilerplate-nonexistant-page": "La page de contenu standard n’existe pas : « $1 »"
 }
