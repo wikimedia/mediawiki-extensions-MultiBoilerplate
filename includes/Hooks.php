@@ -158,7 +158,7 @@ class Hooks {
 				} else {
 					$boilerplate = new WikiPage( $boilerplateTitle );
 				}
-				$parser = MediaWikiServices::getInstance()->getParser()->getFreshParser(); // Since MW 1.32
+				$parser = MediaWikiServices::getInstance()->getParserFactory()->getInstance(); // Since MW 1.39
 				$parserOptions = $parser->getOptions() === null ?
 							new ParserOptions( $out->getUser() ) :
 							$parser->getOptions();
