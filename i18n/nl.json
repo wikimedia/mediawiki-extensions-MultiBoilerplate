@@ -6,11 +6,13 @@
 			"McDutchie"
 		]
 	},
-	"multiboilerplate-desc": "Biedt de mogelijkheid een standaard tekstblok te selecteren uit een selectievenster bovenaan een bewerkingspagina",
-	"multiboilerplate-legend": "Sjabloon selecteren",
+	"multiboilerplate-desc": "Biedt de mogelijkheid bij het bewerken een modeltekst te kiezen uit een selectievenster bovenaan het bewerkingsformulier",
+	"multiboilerplate-legend": "Modeltekst selecteren",
 	"multiboilerplate-submit": "Laden",
-	"boilerplates": "Standaardteksten",
+	"boilerplates": "Modelteksten",
 	"multiboilerplate-special-pagetext": "Deze sjablonen kunnen bij het aanmaken van een pagina worden voorgeladen.\n(<span class=plainlinks>[{{fullurl:Deze pagina bestaat niet|action=edit}} demonstratie]</span>)",
-	"multiboilerplate-special-define-in-localsettings": "Sjablonen worden ingesteld in LocalSettings.php.",
-	"multiboilerplate-special-define-in-interface": "Sjablonen worden ingesteld in [[MediaWiki:Multiboilerplate]]."
+	"multiboilerplate-special-define-in-localsettings": "Modelteksten worden ingesteld in LocalSettings.php.",
+	"multiboilerplate-special-define-in-interface": "Modelteksten worden ingesteld in [[MediaWiki:Multiboilerplate]].",
+	"multiboilerplate-special-no-boilerplates": "Er zijn nergens modelteksten ingesteld.",
+	"multiboilerplate-nonexistant-page": "Modeltekstpagina bestaat niet: “$1”"
 }
