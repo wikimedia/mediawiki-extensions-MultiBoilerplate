@@ -26,12 +26,12 @@
 
 namespace MediaWiki\Extension\MultiBoilerplate;
 
-use EditPage;
-use Html;
+use MediaWiki\EditPage\EditPage;
+use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 use OutputPage;
 use ParserOptions;
-use Title;
 use WikiPage;
 use Xml;
 
