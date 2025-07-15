@@ -127,7 +127,7 @@ class Hooks {
 			. Xml::openElement( 'fieldset' )
 			. Xml::element( 'legend', null, wfMessage( 'multiboilerplate-legend' )->plain() )
 			. Xml::openElement( 'label' )
-			. wfMessage( 'multiboilerplate-label' )->plain()
+			. wfMessage( 'multiboilerplate-label' )->escaped()
 			. Xml::openElement( 'select', [ 'name' => 'boilerplate' ] )
 			. $options
 			. Xml::closeElement( 'select' )
