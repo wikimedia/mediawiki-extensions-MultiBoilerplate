@@ -275,6 +275,11 @@ $specialPageAliases['tl'] = [
 	'Boilerplates' => [ 'Makukuhang mga platong pampakulo' ],
 ];
 
+/** Chinese (中文) */
+$specialPageAliases['zh'] = [
+	'Boilerplates' => [ 'Boilerplates' ],
+];
+
 /** Simplified Chinese (中文（简体）‎)
  * @author Lakejason0
  * @author PhiLiP
