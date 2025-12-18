@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Libattery"
+			"Libattery",
+			"Tensama0415"
 		]
 	},
-	"multiboilerplate-desc": "문서 편집시 편집 폼 위에 상용 문구를 선택하는 드랍 다운 메뉴를 보여줍니다",
+	"multiboilerplate-desc": "문서 편집시 편집 폼 위에 상용 문구를 선택하는 드롭다운 메뉴를 보여줍니다",
 	"multiboilerplate-legend": "상용 문구를 선택하십시오",
 	"multiboilerplate-submit": "입력",
 	"boilerplates": "상용 문구 목록",
