@@ -143,8 +143,8 @@ class Hooks {
 				Html::element( 'legend', [], wfMessage( 'multiboilerplate-legend' )->plain() )
 					. $label
 					. ' '
-					. Html::Hidden( 'action', 'edit' )
-					. Html::Hidden( 'title', $request->getText( 'title' ) )
+					. Html::hidden( 'action', 'edit' )
+					. Html::hidden( 'title', $request->getText( 'title' ) )
 					. Html::submitButton( wfMessage( 'multiboilerplate-submit' )->plain() )
 			)
 		);
